@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "X Paid Partnership Blocker",
+  "version": "1.0.0",
+  "description": "Hides X posts bearing the Paid partnership disclosure.",
+  "minimum_chrome_version": "105",
+  "content_scripts": [
+    {
+      "matches": ["https://x.com/*", "https://twitter.com/*"],
+      "css": ["hide-paid-partnerships.css"]
+    }
+  ]
+}

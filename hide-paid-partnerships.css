@@ -1,0 +1,7 @@
+/* Match X's disclosure, not a policy link someone included in their tweet text.
+   Native :has() also restores visibility when X recycles an article. */
+article[data-testid="tweet"]:has(
+  a[href="https://help.x.com/rules-and-policies/paid-partnerships-policy"]:not([data-testid="tweetText"] a)
+) {
+  display: none !important;
+}
